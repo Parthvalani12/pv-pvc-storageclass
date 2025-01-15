@@ -67,3 +67,11 @@ The output of the above command should show the mounted EBS volume and its avail
 
 ## Conclusion
 In this guide, we have shown you how to install and configure the AWS EBS CSI Driver on your Kubernetes cluster and how to use it for dynamic provisioning of EBS volumes.
+
+## unstalling Helm csi-driver-pods
+```bash
+helm uninstall aws-ebs-csi-driver -n kube-system
+```
+```bash
+kubectl get pods -n kube-system | grep ebs-csi
+```
